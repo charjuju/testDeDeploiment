@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #9B4D4F;
+  --secondary-color: #FFFF9D;
+  --tertiary-color: #000000;
+  --background-color: #F5F5F5;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +12,550 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: 'hidden';
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.connexion-bouton {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.connexion-label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.connexion-input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  width: 20%;
+}
+
+.connexion-bouton:hover {
+  background-color: var(--primary-color);
+}
+
+.connexion-bouton:active {
+  transform: translateY(1px);
+}
+
+.connexion-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.deconnexion-bouton {
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.deconnexion-bouton:hover {
+  background-color: #fff;
+  color: #ff4500;
+  border: 1px solid #ff4500;
+}
+
+.deconnexion-bouton:focus {
+  outline: none;
+}
+
+.deconnexion-bouton:active {
+  transform: scale(0.95);
+}
+
+.nomapparte {
+  padding-top: 10px;
+}
+
+.descriptionapparte {
+  padding-left: 25px;
+}
+
+.apartementinformation {
+  display: flex;
+}
+
+.new-restaurant-form {
+  display: flex;
+  background-color: var(--primary-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-restaurant-label {
+  font-size: 40px;
+}
+
+.new-restaurant-input {
+  width: 500px;
+  min-height: 30px;
+  height: auto;
+  overflow-y: hidden;
+}
+
+.new-restaurant-text-area {
+  color: var(--tertiary-color);
+  font-size: 1em;
+  margin-bottom: 20px;
+  width: 95%;
+  height: 100px;
+  overflow-y: hidden;
+  transition: height 0.2s ease;
+  resize: none;
+}
+
+.new-restaurant-text-area:focus {
+  outline: none;
+}
+
+.new-restaurant-text-area:disabled {
+  background-color: #f5f5f5;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.new-restaurant-input-numero {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 10%;
+  height: 30px;
+}
+
+.new-restaurant-input-rue {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 70%;
+  height: 30px;
+}
+
+.restorant-liste {
+  width: 800px;
+  background-color: #ff440000;
+  border-color: #0961e4;
+}
+
+.etage-carte {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 20px;
+  width: 60%;
+}
+
+.etage-nom {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.etage-nomero {
+  padding-left: 20px;
+}
+
+.etatDesLieuxConteneurPagePrincipale {
+  background-color: var(--background-color);
+  border: 2px solid var(--primary-color);
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  width: 50%;
+}
+
+.trucQuiMetAuMilieux {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.etatDesLieuxConteneur {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoImg {
+  height: 64px;
+  width: 64px;
+  margin: 10px;
+}
+
+#greenLight {
+  box-shadow: 0px 0px 20px 10px rgba(0, 255, 0, 0.3);
+  padding: 10px;
+  animation: pulseG 2s infinite ease-in-out;
+  border-radius: 20px;
+}
+
+#redLight {
+  box-shadow: 0px 0px 20px 10px rgba(255, 0, 0, 0.3);
+  padding: 10px;
+  animation: pulseR 2s infinite ease-in-out;
+  border-radius: 20px;
+}
+
+@keyframes pulseG {
+  0% {
+    background-color: rgba(182, 241, 148, 0.5);
+    box-shadow: 0px 0px 20px 10px rgba(182, 241, 148, 0.3);
+  }
+  50% {
+    background-color: rgba(182, 241, 148, 1);
+    box-shadow: 0px 0px 20px 10px rgba(182, 241, 148, 1);
+  }
+  100% {
+    background-color: rgba(182, 241, 148, 0.5);
+    box-shadow: 0px 0px 20px 10px rgba(182, 241, 148, 0.3);
+  }
+}
+
+@keyframes pulseR {
+  0% {
+    background-color: rgba(241, 148, 148, 0.5);
+    box-shadow: 0px 0px 20px 10px rgba(241, 241, 148, 0.3);
+  }
+  50% {
+    background-color: rgb(241, 148, 148);
+    box-shadow: 0px 0px 20px 10px rgb(241, 148, 148);
+  }
+  100% {
+    background-color: rgba(241, 148, 148, 0.5);
+    box-shadow: 0px 0px 20px 10px rgba(241, 241, 148, 0.3);
+  }
+}
+
+.invisibleButton {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  outline: none;
+}
+
+.informatinFicheEtatDesLieux {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+
+/*TEST*/
+
+button {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--tertiary-color);
+  cursor: pointer;
+  font-size: 1em;
+  margin: 10px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.suppreButton {
+}
+
+.suppreButton:hover {
+  box-shadow: 2px 2px 5px red;
+}
+
+.carteapparte {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 20px;
+  width: 60%;
+}
+
+.carteapparte:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nomapparte {
+  color: var(--primary-color);
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.descriptionapparte {
+  color: var(--tertiary-color);
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.connexion-box {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 20px;
+  width: 50%;
+}
+
+.connexion-box input[type="submit"] {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.apartementinformation {
+  background-color: var(--background-color);
+  border: 2px solid var(--primary-color);
+  border-left: none;
+  border-right: none;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+  
+  .apartementinformation h2 {
+  color: #9B4D4F;
+  font-size: 32px;
+  margin-top: 0;
+  }
+  
+  .apartementinformation p {
+  color: #444444;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  }
+  
+  .apartementinformation ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  }
+  
+  .apartementinformation li {
+  color: #444444;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  }
+  
+  .apartementinformation li svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  fill: #9B4D4F;
+  }
+  
+  .apartementinformation .prix {
+  color: #9B4D4F;
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+  }
+
+  .Liste-des-etages {
+    display: flex;
+    flex-direction: column;
+  }
+
+.etage-carte:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+  background-color: #ffff9d9f;
+  margin: 10px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px var(--primary-color);
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--primary-color);
+}
+
+textarea {
+  border: none;
+  background-color: #ffff9d9f;
+  margin: 10px;
+  border-radius: 5px;
+  resize: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+textarea:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px var(--primary-color);
+}
+
+.trucQuiMetAuMilieuxFix {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 0px;
+  margin: 0px;
+}
+
+.navbar {
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-top: 0px;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  top: 0;
+  left: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pagePrincipal {
+}
+
+.new-etage-input-num {
+  width: 50%px;
+}
+
+.new-etage-input {
+  width: 40%;
+}
+
+.cardEtatLieux {
+  width: 100%;
+}
+
+.marginLeftAndBottom30px {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.iconeEtatDesLieux {
+  display: flex;
+  align-items:  center;
+}
+
+
+/*DROPE ZONE*/
+
+.drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.drop-zone.drag-over {
+  border-color: #aaa;
+  background-color: #f7f7f7;
+  color: #aaa;
+}
+
+.drop-zone.is-dragging {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.drop-zone p {
+  margin: 0;
+  padding: 0;
+}
+
+.icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preview {
+  max-width: 200px;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/*DROPE ZONE FIN*/
